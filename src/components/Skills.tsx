@@ -2,9 +2,17 @@ export default function Skills() {
   const skills = [
     "SQL",
     "Python",
+    "Clustering",
+    "Data Science",
     "Machine Learning",
     "Deep Learning",
-    "Data Science",
+    "Data Analytics",
+    "Computer Vision",
+    "Ensemble Learning",
+    "Data Visualization",
+    "Data Preprocessing",
+    "Descriptive & Predictive Statistics",
+    "Supervised & Unsupervised Learning",
     "Git & GitHub",
   ];
 

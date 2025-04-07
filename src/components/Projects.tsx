@@ -11,19 +11,18 @@ const projects: Project[] = [
     title: "Book Recommendation System",
     description:
       "Collaborative filtering-based recommendation system using KNN.",
-    github: "https://github.com/yourusername/book-recommender",
-    demo: "https://yourapp-link.com",
+    github: "https://github.com/nitinlodhi019/Book-Recommendation-System",
+    demo: "https://book-recommendation-system-94gz.onrender.com/",
   },
   {
-    title: "Digit Classifier (ANN)",
+    title: "Handwritten Digit Classifier",
     description: "A 97% accurate ANN model for handwritten digit recognition.",
-    github: "https://github.com/yourusername/digit-classifier",
+    github: "https://github.com/nitinlodhi019/Digit-Classifier-ANN",
   },
   {
-    title: "COVID-19 EDA",
-    description:
-      "Exploratory data analysis to identify important clinical features.",
-    github: "https://github.com/yourusername/covid19-eda",
+    title: "Iris Classification",
+    description: "",
+    github: "https://github.com/nitinlodhi019/Iris-Classification",
   },
 ];
 
