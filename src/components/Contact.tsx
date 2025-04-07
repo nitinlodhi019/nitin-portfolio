@@ -1,17 +1,56 @@
-// src/components/Contact.tsx
+import { useState } from "react";
+
 export default function Contact() {
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xpwpojod", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        e.currentTarget.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+  };
+
   return (
     <section id="contact" className="py-20 px-8 bg-white text-gray-900">
-      {" "}
-      {/* <-- text color changed */}
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold text-indigo-600 text-center mb-8">
           Contact Me
         </h2>
-        <form className="space-y-6">
+
+        {status === "success" && (
+          <div className="mb-4 p-4 bg-green-100 text-green-700 rounded-lg text-center">
+            Message sent successfully! ✅
+          </div>
+        )}
+        {status === "error" && (
+          <div className="mb-4 p-4 bg-red-100 text-red-700 rounded-lg text-center">
+            Oops! Something went wrong. ❌
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-sm font-medium">Name</label>
             <input
+              name="name"
+              required
               type="text"
               className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-indigo-500"
               placeholder="Your Name"
@@ -20,6 +59,8 @@ export default function Contact() {
           <div>
             <label className="block text-sm font-medium">Email</label>
             <input
+              name="email"
+              required
               type="email"
               className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-indigo-500"
               placeholder="you@example.com"
@@ -28,6 +69,8 @@ export default function Contact() {
           <div>
             <label className="block text-sm font-medium">Message</label>
             <textarea
+              name="message"
+              required
               rows={5}
               className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-indigo-500"
               placeholder="Write your message here..."
