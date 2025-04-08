@@ -21,7 +21,8 @@ const projects: Project[] = [
   },
   {
     title: "Iris Classification",
-    description: "",
+    description:
+      "Built a machine learning model using Scikit-learn to classify iris species.",
     github: "https://github.com/nitinlodhi019/Iris-Classification",
   },
 ];
