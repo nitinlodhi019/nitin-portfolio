@@ -2,7 +2,8 @@
 type Project = {
   title: string;
   description: string;
-  github: string;
+  github?: string;
+  kaggle?: string;
   demo?: string;
 };
 

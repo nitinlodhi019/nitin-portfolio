@@ -5,24 +5,34 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+
+    const form = e.currentTarget;
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
 
     try {
-      const response = await fetch("https://formspree.io/f/xpwpojod", {
+      const response = await fetch("https://formspree.io/f/manelkpq", {
         method: "POST",
         headers: {
           Accept: "application/json",
+          "Content-Type": "application/json",
         },
-        body: formData,
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         setStatus("success");
-        e.currentTarget.reset();
+        form.reset();
       } else {
+        const errorData = await response.json();
+        console.error("Formspree error:", errorData);
         setStatus("error");
       }
     } catch (error) {
+      console.error("Network error:", error);
       setStatus("error");
     }
   };

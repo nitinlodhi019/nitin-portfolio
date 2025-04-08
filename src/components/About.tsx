@@ -5,10 +5,13 @@ export default function About() {
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6 text-indigo-600">About Me</h2>
         <p className="text-lg leading-relaxed">
-          Hi, I'm <strong>Nitin</strong> — a passionate developer with skills in
-          React, TypeScript, Python, Machine Learning, and more. I love solving
-          problems and building useful applications. Whether it's a web app or a
-          data science project, I’m always ready to learn and create.
+          Hi, I'm <strong>Nitin</strong> — "I am an aspiring Data Scientist with
+          practical experience in machine learning, deep learning, and data
+          analytics. I enjoy working with Python and SQL, especially when
+          building predictive models and creating meaningful data
+          visualizations. Right now, I’m diving deeper into deep learning and
+          learning how to use Power BI for building interactive dashboards and
+          reports."
         </p>
       </div>
     </section>

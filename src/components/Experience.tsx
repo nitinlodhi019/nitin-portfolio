@@ -14,7 +14,7 @@ export default function Experience() {
           <div className="border-l-4 border-indigo-600 pl-4">
             <h3 className="text-xl font-semibold">Data Science Intern</h3>
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              Unified Mentor | November 2024 - December 2023
+              Unified Mentor | November 2024 - December 2024
             </p>
             <ul className="list-disc list-inside mt-2">
               <li>
