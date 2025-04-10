@@ -36,7 +36,7 @@ export default function Education() {
               2020 – 2022
             </p>
             <p className="mt-2 text-gray-700 dark:text-gray-200">
-              Score: 78% – Science with Mathematics
+              Score: 68% – Science with Mathematics
             </p>
           </div>
         </div>
