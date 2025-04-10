@@ -6,4 +6,10 @@ Additional references:
 * [Getting started with Vite](https://vitejs.dev/guide/)
 * [Tailwind documentation](https://tailwindcss.com/docs/installation)
 
-# nitin-portfolio
+# Useful links
+
+code - https://codesandbox.io/dashboard/recent
+
+forms - https://formspree.io/
+
+deployment - https://vercel.com/nitinlodhi019s-projects
