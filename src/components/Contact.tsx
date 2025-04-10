@@ -7,10 +7,11 @@ export default function Contact() {
     e.preventDefault();
 
     const form = e.currentTarget;
+    const formDataObj = new FormData(form);
     const formData = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
+      name: formDataObj.get("name") as string,
+      email: formDataObj.get("email") as string,
+      message: formDataObj.get("message") as string,
     };
 
     try {
